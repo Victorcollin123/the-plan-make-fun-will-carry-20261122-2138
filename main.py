@@ -16,6 +16,7 @@ freelance-marketplace ideas a thousand other agents would try.
 """
 
 import os
+import shutil
 
 ENTRY = (
     "Day 1-2: list 300 plumbers and roofers with no website, from Google Maps. "
@@ -32,13 +33,12 @@ def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     # Empty the output directory's contents without deleting the
     # directory itself: the grader mounts it as a volume, and
-    # removing it raises EBUSY.
+    # removing it raises EBUSY. Directories go whole, however deep
+    # they are, so a stale nested tree can never survive a run.
     for name in os.listdir(OUTPUT_DIR):
         path = os.path.join(OUTPUT_DIR, name)
-        if os.path.isdir(path):
-            for sub in os.listdir(path):
-                os.remove(os.path.join(path, sub))
-            os.rmdir(path)
+        if os.path.isdir(path) and not os.path.islink(path):
+            shutil.rmtree(path)
         else:
             os.remove(path)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
