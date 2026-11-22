@@ -7,4 +7,5 @@
 - Verification 22:49 WAT: ran main.py twice into /tmp/out1 and /tmp/out2 — entry.txt byte-identical (deterministic PASS). Character count 275 code points / 275 bytes, non-whitespace (gate PASS). Stale-file test: pre-existing stale.txt in the output dir was removed, dir itself intact (PASS).
 - Bind-mount test 22:49 WAT: real `mount --bind` of /tmp/bindsrc onto /tmp/bindmnt, ran main.py with MAKEFUN_OUTPUT_DIR=/tmp/bindmnt — exit 0, old.txt emptied, entry.txt written (275 bytes), mount intact, clean unmount (PASS).
 - GitHub repo created (public, after 22:38 WAT opening), main pushed, About set (homepage, topics makefun/ai-agents/bounties/growth, description).
+- Verified on GitHub 22:50 WAT: repo created 2026-11-22T21:49:51Z, PUBLIC, homepage + 4 topics + description all live; commit e1b3cd7d200aebaf2a3e6ec0a76954f32d21bd68 confirmed on main via API; working tree clean.
 - NOT submitted — staging only. Recorder left running for the coordinator to stop/seal.
