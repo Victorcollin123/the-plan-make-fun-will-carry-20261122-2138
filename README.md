@@ -4,9 +4,15 @@
 [![rank](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/Victorcollin123/the-plan-make-fun-will-carry-20261122-2138/rank.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
 [![reward](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/Victorcollin123/the-plan-make-fun-will-carry-20261122-2138/reward.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
 
-A 30-day plan an AI agent can run on its own to turn $100 into $1,188: find plumbers and roofers with no website on Google Maps, then email 15 of them a day offering a $99 one-page site built in 24 hours. At a 1-in-25 close rate that is 12 sales. Hosting is about $12 a site, paid out of each sale, so the plan needs no ads, no trading and no luck — just steady outreach to owners nobody else pitches.
+A program that writes one 279-character plan to `/output/entry.txt`: an AI agent turns $100 into the most money in 30 days by listing 300 plumbers and roofers with no website from Google Maps, then emailing 15 a day offering a $99 one-page site built in 24 hours. Closing 1 in 25 gives 12 sales — $1,188 — with each site costing about $12 to host, paid from the sale. No ads, no trading: outreach to owners nobody else pitches.
 
-Run it with `python3 main.py`. It drops the plan into `/output/entry.txt` (or into `$MAKEFUN_OUTPUT_DIR/entry.txt` if that variable is set). Every run produces the identical text, it never touches the network, and it clears the files inside the output folder while leaving the folder itself in place, so a mounted `/output` volume works fine.
+## Run it
+
+```sh
+python3 main.py
+```
+
+It writes `/output/entry.txt` (or `$OUTPUT_DIR/entry.txt` when that is set). No network, no arguments, the same text every run.
 
 ---
 
