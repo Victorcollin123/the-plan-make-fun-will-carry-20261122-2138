@@ -18,7 +18,10 @@ PLAN = (
     "No ads, no trading: outreach to owners nobody else pitches."
 )
 
-OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/output")
+OUTPUT_DIR = (
+    os.environ.get("MAKEFUN_OUTPUT_DIR")
+    or os.environ.get("OUTPUT_DIR", "/output")
+)
 
 
 def main() -> None:
